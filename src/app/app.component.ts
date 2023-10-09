@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotels-frontend';
+  angularConcepts = ['components', 'services', 'pipes', 'models', 'directives'];
+  
 }
