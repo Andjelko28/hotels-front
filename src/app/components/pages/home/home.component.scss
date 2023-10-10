@@ -1,0 +1,8 @@
+@import './../../../../assets/scss/colors';
+@import './../../../../assets/scss/borders';
+
+p {
+    color: $color-secondary;
+    border: $border-dashed;
+    border-color: $color-secondary;
+}
