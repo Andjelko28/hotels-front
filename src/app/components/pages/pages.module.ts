@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HelpersModule } from "../helpers/helpers.module";
+import { ViewHotelComponent } from './view-hotel/view-hotel.component';
 
 
 @NgModule({
     declarations: [
         HomeComponent,
         HotelsComponent,
-        ContactUsComponent
+        ContactUsComponent,
+        ViewHotelComponent
     ],
     imports: [
         CommonModule,

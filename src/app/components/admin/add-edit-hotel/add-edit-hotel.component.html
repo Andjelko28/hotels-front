@@ -1,0 +1,34 @@
+<h3>Add hotel</h3>
+<div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="hotel.name">
+</div>
+<div class="form-group">
+    <label>No of start</label>
+    <select class="form-control" [(ngModel)]="hotel.no_of_stars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" [(ngModel)]="hotel.description"></textarea>
+</div>
+<div class="form-group">
+    <label>Year of start:</label>
+    <input type="number" class="form-control" [(ngModel)]="hotel.year_of_start">
+</div>
+<div class="form-group">
+    <label>Upload file</label>
+    <input type="file" (change)="setUploadedFile($event)" />
+</div>
+<div>
+    <button (click)="saveHotel()" class="btn btn-primary">Save</button>
+</div>
+<div class="row" *ngIf="edit">
+    <label>Current photo:</label>
+    <img src="{{apiUrl}}/{{hotel.image_path}}">
+</div>
