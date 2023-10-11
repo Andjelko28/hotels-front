@@ -1,1 +1,26 @@
-<p>hotels works!</p>
+<h3>Hotels</h3>
+
+<div class="row row-cols-md-3 row-cols-sm-1">
+    <ng-container *ngFor="let h of hotels">
+        <app-hotel-card [hotel]="h"></app-hotel-card>
+    </ng-container>
+</div>
+
+
+
+<!-- <table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Year of start</th>
+        <th>Number of stars</th>
+    </tr>
+    <tr *ngFor="let h of hotels">
+        <td>{{h.id}}</td>
+        <td>{{h.name}}</td>
+        <td>{{h.description}}</td>
+        <td>{{h.yearOfStart}}</td>
+        <td>{{h.noOfStars}}</td>
+    </tr>
+</table> -->
