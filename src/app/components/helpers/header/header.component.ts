@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  username = this.auth.isLoggedIn() ? this.auth.getUserData().username : '';
+  isLoggedIn = this.auth.isLoggedIn();
+
+  constructor(private auth: AuthService) { }
+
+  logout() {
+    localStorage.clear();
+    window.location.href = '/';
+  }
 }
